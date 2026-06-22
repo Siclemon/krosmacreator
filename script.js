@@ -29,4 +29,25 @@ var download = function(){
   link.click();
 }
 
-download();
+function loadFont(name,url){
+  //Loads a custom font from Google Fonts
+  //Make sure that the URL is a path to a valid font file
+  let customFont = new FontFace(name, "url(" + url + ")");
+
+  customFont.load().then((font) => {
+    document.fonts.add(font);
+    console.log("Font loaded: "+name);
+  });
+};
+
+loadFont("Animatic", "https://fonts.gstatic.com/s/specialelite/v11/XLYgIZbkc4JPUL5CVArUVL0ntnAOSA.woff2");
+
+function init() {
+  let canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#0f0";
+  ctx.font = "15pt Animatic";
+  ctx.fillText('text', 10, 10);
+}
+
+init()
