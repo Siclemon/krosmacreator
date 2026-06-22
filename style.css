@@ -1,0 +1,27 @@
+canvas {
+    background-color: aquamarine;
+}
+.all {
+    display: flex;
+}
+
+.carte {
+    height: 350px;
+    width: 230px;
+    border: black 3px solid;
+}
+
+#name {
+    position: relative;
+    top: 150px;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+#desc {
+    position: relative;
+    top: 180px;
+    width: fit-content;
+    margin: 0 auto;
+}
