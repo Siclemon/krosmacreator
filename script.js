@@ -1,16 +1,16 @@
 
 
 const nameInput = document.getElementById('nom');
-const namePreview = document.getElementById('name');
+const namePreview = document.getElementById('nameText');
 const descInput = document.getElementById('effet');
 const descPreview = document.getElementById('desc');
 const canvas = document.getElementById('canvas');
 
-nameInput.addEventListener("change", () => {
+nameInput.addEventListener("input", () => {
     namePreview.textContent = nameInput.value;
 });
 
-descInput.addEventListener("change", () => {
+descInput.addEventListener("input", () => {
     descPreview.textContent = descInput.value;
 });
 
