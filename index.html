@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 </head>
+
 <body>
     <div class="all">
         <div>
@@ -39,15 +42,24 @@
             </div>
         </div>
         <div>
-            <canvas id="canvas" width="200" height="350"></canvas>
-        </div>
-        <div>
-            <div class="carte">
-                <p id="name">-'grz</p>
+            <div class="carte" id="card">
+                <img src="/assets/card_front_summon_paper.png" alt="" id="template">
+                <svg id="name" height="100" width="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <path id="CurvedPath" d="M 0 150 Q 400 130 800 150 " />
+                    </defs>
+                    <text font-size="94" x='325' y='50' text-anchor="middle" fill="#fffbf8"
+                        font-family=Bernard style="text-shadow: 1px 0px 3px gray;">
+                        <textPath id='MyMessage' xlink:href="#CurvedPath">Nom de la carte</textPath>
+                    </text>
+                </svg>
                 <p id="desc">aocojcjze</p>
             </div>
         </div>
     </div>
 </body>
-<script src="script.js" defer></script>
+<script src="script.js" defer type="module"></script>
+<script src="/node_modules/html2canvas/dist/html2canvas.js"></script>
+
 </html>

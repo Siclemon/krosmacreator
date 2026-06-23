@@ -1,27 +1,44 @@
-canvas {
-    background-color: aquamarine;
+@font-face {
+    font-family: Bernard;
+    src: url(/BernardMTCondensed.ttf);
 }
+
 .all {
     display: flex;
 }
 
 .carte {
-    height: 350px;
-    width: 230px;
+    height: 512px;
+    width: 404px;
     border: black 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #name {
-    position: relative;
-    top: 150px;
-    width: fit-content;
-    margin: 0 auto;
-    font-size: 22px;
+    /* position: relative; */
+    top: 285px;
+    margin: 120px 0 0 120px;
+    font-size: 29px;
+    font-family: "Bernard";
+    color: #fffbf8;
+}
+
+#nameText {
+    text-anchor: middle;
+    fill: #fffbf8;
 }
 
 #desc {
-    position: relative;
-    top: 180px;
+    position: absolute;
+    top: 380px;
     width: fit-content;
     margin: 0 auto;
+    font-family: "Roboto";
+}
+
+#template {
+    position: absolute;
+    z-index: -1;
 }
